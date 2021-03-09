@@ -203,7 +203,7 @@
                 <div class="card-overlay-a-content">
                   <div class="card-header-a">
                     <h3 class="card-title-a">
-                      <a href="#">مجلة الآداب
+                      <a href="{{url('/more')}}">مجلة الآداب
                       </a>
                     </h3>
                   </div>
@@ -211,7 +211,7 @@
                     <div class="price-box d-flex">
                       <span class="price-a">%نسبة القبول | 40 </span>
                     </div>
-                    <a href="#" class="link-a">اضغط للعرض
+                    <a href="{{url('/more')}}" class="link-a">اضغط للعرض
                       <span class="ion-ios-arrow-forward"></span>
                     </a>
                   </div>
@@ -250,7 +250,7 @@
                 <div class="card-overlay-a-content">
                   <div class="card-header-a">
                     <h3 class="card-title-a">
-                      <a href="#">مجلة الاقتصاد والبيئة
+                      <a href="{{url('/more')}}">مجلة الاقتصاد والبيئة
                       </a>
                     </h3>
                   </div>
@@ -258,7 +258,7 @@
                     <div class="price-box d-flex">
                       <span class="price-a">%نسبة القبول | 50 </span>
                     </div>
-                    <a href="#" class="link-a">اضغط للعرض
+                    <a href="{{url('/more')}}" class="link-a">اضغط للعرض
                       <span class="ion-ios-arrow-forward"></span>
                     </a>
                   </div>
@@ -297,7 +297,7 @@
                 <div class="card-overlay-a-content">
                   <div class="card-header-a">
                     <h3 class="card-title-a">
-                      <a href="more.html">مجلة جسور المعرفة
+                      <a href="{{url('/more')}}">مجلة جسور المعرفة
                       </a>
                     </h3>
                   </div>
@@ -305,7 +305,7 @@
                     <div class="price-box d-flex">
                       <span class="price-a">%نسبة القبول | 50 </span>
                     </div>
-                    <a href="more.html" class="link-a">اضغط للعرض
+                    <a href="{{url('/more')}}" class="link-a">اضغط للعرض
                       <span class="ion-ios-arrow-forward"></span>
                     </a>
                   </div>

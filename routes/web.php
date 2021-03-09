@@ -39,3 +39,7 @@ Route::get('/contact', function () {
 Route::get('/addJournal', function () {
     return view('addJournal');
 });
+
+Route::get('/more',function(){
+    return view('more');
+});
