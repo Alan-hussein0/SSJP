@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::get('/journal', function () {
     return view('journal');
-});
+})->name('journal');
 
 Route::get('/login', function () {
     return view('login');
@@ -43,3 +43,24 @@ Route::get('/addJournal', function () {
 Route::get('/more',function(){
     return view('more');
 });
+
+
+//---------------------------------------
+//editor
+
+Route::get('/editor/profile', function () {
+    return view('editor.profile');})
+->name('editor.profile');
+
+Route::post('/editor/update','App\Http\Controllers\EditorController@update')
+->name('editor.update');
+
+
+Route::get('/editor/research', function () {
+    return view('editor.resarch');
+})->name('editor.research');
+
+
+Route::get('/editor/policy', function () {
+    return view('editor.policy');
+})->name('editor.policy');

@@ -20,6 +20,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'is_author',
+        'is_reviewer',
+        'is_manager'
     ];
 
     /**
@@ -40,4 +43,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function editor()
+    {
+        return $this->hasOne('App\Models\Profile' );
+    }
 }
