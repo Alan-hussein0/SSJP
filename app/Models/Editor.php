@@ -15,4 +15,9 @@ class Editor extends Model
     {
         return $this->belongsTo('App\Models\User', 'user_id' );
     }
+
+    public function journal()
+    {
+        return $this->belongsToMany('App\Models\Journal');
+    }
 }

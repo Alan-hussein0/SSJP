@@ -61,6 +61,11 @@ Route::get('/editor/research', function () {
 })->name('editor.research');
 
 
+Route::get('/editor/show', function () {
+    return view('editor.show');
+})->name('editor.show');
+
+
 Route::get('/editor/policy', function () {
     return view('editor.policy');
 })->name('editor.policy');

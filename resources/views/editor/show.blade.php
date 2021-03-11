@@ -145,7 +145,7 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="{{route('editor.profile')}}"><img src="/photo/profile/ui-sam.jfif" class="img-circle" width="80"></a></p>
+          <p class="centered"><a href="{{route('editor.profile'{{--,$user->id--}})}}"><img src="/photo/profile/ui-sam.jfif" class="img-circle" width="80"></a></p>
           <h5 class="centered">User  </h5>
 
 		    <li>
@@ -161,7 +161,7 @@
               </a>
           </li>
 		  <li>
-            <a href="{{route('editor.research{{--.waiting--}}')}}">
+            <a href="{{route('editor.research'{{--.waiting--}})}}">
               <i class=" fa fa-book"></i>
               <span>Research iN Wating </span>
               </a>
@@ -186,43 +186,102 @@
    <section id="main-content">
       <section class="wrapper">
 
-	    <div class="row mt">
-          <div class="col-md-12">
-            <div class="content-panel">
-              <table class="table table-striped table-advance table-hover">
-                <h4><i class="fa fa-angle-right"></i> Resarch Details: </h4>
-                <hr>
-                <thead>
-                  <tr>
-                    <th><i class="fa fa-male"></i> Auther Name</th>
-                    <th class="hidden-phone"><i class="fa fa-question-circle"></i> TiTLE</th>
-
-                    <th><i class=" fa fa-edit"></i> Status</th>
-                    <th></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <a href='#'>Abd</a>
+	  <div id="edit" class="tab-pane">
+                    <div class="row">
+                      <div class="col-lg-8 col-lg-offset-2 detailed">
+                        <h4 class="mb">Show Journal</h4>
+                        <form role="form" class="form-horizontal">
+                          <td>
+                     <h3  style="font-size:35px;">Title of Research:  {{--$research->title--}}</h3>
                     </td>
-                    <td class="hidden-phone">ttt</td>
+                          <div class="form-group">
+                            <label class="col-lg-2 control-label">Abstract:</label>
+                            <div class="col-lg-10">
+                              <textarea rows="50" cols="80" class="form-control" id="" name="">
+                                  {{--$research->abstract--}}
+                              </textarea>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-lg-8 col-lg-offset-2 detailed mt">
 
-                    <td><span class="label label-warning label-mini">Pending</span></td>
-                    <td>
-					<button class="btn btn-default"><a href="{{route('editor.show'{{--,$research->id--}})}}"><i class="fa fa-eye "></i></a></button>
-                    </td>
-                  </tr>
+                       <div class="showback">
+              <h4><i class="fa fa-angle-right"></i> Choose the decicion:</h4>
+              <!-- Button trigger modal -->
+              <button class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal">
+               Aproove
+                </button>
+              <!-- Modal -->
+              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+
+                    </div>
+                    <div class="modal-body">
+                        <h4 class="modal-title" id="myModalLabel">Choose Reviewers:</h4>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox1" value="option1"> khaled
+                </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox2" value="option2"> Omar
+                </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox3" value="option3"> Abd
+                </label>
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Send</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+			  <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal2">
+               Reject
+                </button>
+              <!-- Modal -->
+              <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+
+                    </div>
+                    <div class="modal-body">
+                        <h4 class="modal-title" id="myModalLabel">Select Problem:</h4>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox1" value="option1"> Introuduction
+                </label>
+              <label class="checkbox-inline">
+                <input type="checkbox" id="inlineCheckbox2" value="option2"> Body
+                </label>
 
 
-                </tbody>
-              </table>
+
+                    </div>
+					<div class="form-group">
+                            <label class="col-lg-2 control-label">Note:</label>
+                            <div class="col-lg-10">
+                              <textarea rows="10" cols="20" class="form-control" id="" name=""></textarea>
+                            </div>
+                          </div>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Send</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!-- /content-panel -->
-          </div>
-          <!-- /col-md-12 -->
-        </div
-
+                      </div>
+                      <!-- /col-lg-8 -->
+                    </div>
+                    <!-- /row -->
+                  </div>
 
 
 

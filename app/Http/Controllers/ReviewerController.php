@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Journal;
+use App\Models\Reviewer;
 use Illuminate\Http\Request;
 
-class JournalController extends Controller
+class ReviewerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class JournalController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Journal  $journal
+     * @param  \App\Models\Reviewer  $reviewer
      * @return \Illuminate\Http\Response
      */
-    public function show(Journal $journal)
+    public function show(Reviewer $reviewer)
     {
         //
     }
@@ -52,10 +52,10 @@ class JournalController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Journal  $journal
+     * @param  \App\Models\Reviewer  $reviewer
      * @return \Illuminate\Http\Response
      */
-    public function edit(Journal $journal)
+    public function edit(Reviewer $reviewer)
     {
         //
     }
@@ -64,10 +64,10 @@ class JournalController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Journal  $journal
+     * @param  \App\Models\Reviewer  $reviewer
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Journal $journal)
+    public function update(Request $request, Reviewer $reviewer)
     {
         //
     }
@@ -75,10 +75,10 @@ class JournalController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Journal  $journal
+     * @param  \App\Models\Reviewer  $reviewer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Journal $journal)
+    public function destroy(Reviewer $reviewer)
     {
         //
     }
