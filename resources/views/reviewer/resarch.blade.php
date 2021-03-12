@@ -145,7 +145,7 @@
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
         <ul class="sidebar-menu" id="nav-accordion">
-          <p class="centered"><a href="{{route('editor.profile')}}"><img src="/photo/profile/ui-sam.jfif" class="img-circle" width="80"></a></p>
+          <p class="centered"><a href="{{route('reviewer.profile')}}"><img src="/photo/profile/ui-sam.jfif" class="img-circle" width="80"></a></p>
           <h5 class="centered">User  </h5>
 
 		    <li>
@@ -155,24 +155,12 @@
               </a>
           </li>
 		  <li>
-            <a href="{{route('editor.research')}}">
+            <a href="{{route('reviewer.research')}}">
               <i class="fa fa-book"></i>
               <span>Research </span>
               </a>
           </li>
-		  <li>
-            <a href="{{route('editor.research{{--.waiting--}}')}}">
-              <i class=" fa fa-book"></i>
-              <span>Research iN Wating </span>
-              </a>
-          </li>
 
-		   <li>
-            <a href="{{route('editor.policy')}}">
-              <i class="fa fa-book"></i>
-              <span>Policy </span>
-              </a>
-          </li>
 
 		</ul>
         <!-- sidebar menu end-->
@@ -210,7 +198,7 @@
 
                     <td><span class="label label-warning label-mini">Pending</span></td>
                     <td>
-					<button class="btn btn-default"><a href="{{route('editor.show'{{--,$research->id--}})}}"><i class="fa fa-eye "></i></a></button>
+					<button class="btn btn-default"><a href="{{route('reviewer.show'{{--,$research->id--}})}}"><i class="fa fa-eye "></i></a></button>
                     </td>
                   </tr>
 

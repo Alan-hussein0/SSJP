@@ -69,3 +69,26 @@ Route::get('/editor/show', function () {
 Route::get('/editor/policy', function () {
     return view('editor.policy');
 })->name('editor.policy');
+
+
+//---------------------------------------
+//reviewer
+
+Route::get('/reviewer/profile', function () {
+    return view('reviewer.profile');})
+->name('reviewer.profile');
+
+Route::post('/reviewer/update','App\Http\Controllers\ReviewerController@update')
+->name('reviewer.update');
+
+
+Route::get('/reviewer/research', function () {
+    return view('reviewer.resarch');
+})->name('reviewer.research');
+
+
+Route::get('/reviewer/show', function () {
+    return view('reviewer.show');
+})->name('reviewer.show');
+
+
