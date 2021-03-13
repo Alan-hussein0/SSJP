@@ -2,20 +2,40 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\research;
+use App\Models\Research;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ResearchController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+
+    public function indexForReviewer()
     {
-        //
+        $research=Research::where('reviewer->id',Auth::id())->get();
+        return redirect()->route('reviewer.research',compact('research'));
     }
+
+    public function indexForEditor()
+    {
+        $research=Research::where('editor_id',Auth::id())->get();
+        return redirect()->route('editor.research',compact('research'));
+    }
+
+    public function indexForJournal()
+    {
+        $research=Research::where('journal_id',Auth::id())->get();
+        return redirect()->route('journal.research',compact('research'));
+    }
+
+
+
+
+
+
+
+
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -46,7 +66,7 @@ class ResearchController extends Controller
      */
     public function show(research $research)
     {
-        //
+
     }
 
     /**

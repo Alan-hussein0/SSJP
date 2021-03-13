@@ -78,9 +78,12 @@ Route::get('/reviewer/profile', function () {
     return view('reviewer.profile');})
 ->name('reviewer.profile');
 
-Route::post('/reviewer/update','App\Http\Controllers\ReviewerController@update')
+Route::post('/reviewer/update/{$id}','App\Http\Controllers\ReviewerController@update')
 ->name('reviewer.update');
 
+
+Route::post('/reviewer/download/{$id}','App\Http\Controllers\ReviewerController@download')
+->name('reviewer.download');
 
 Route::get('/reviewer/research', function () {
     return view('reviewer.resarch');

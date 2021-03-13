@@ -22,7 +22,8 @@ class User extends Authenticatable
         'password',
         'is_author',
         'is_reviewer',
-        'is_manager'
+        'is_manager',
+        'is_editor'
     ];
 
     /**
@@ -46,6 +47,21 @@ class User extends Authenticatable
 
     public function editor()
     {
-        return $this->hasOne('App\Models\Profile' );
+        return $this->hasOne('App\Models\Editor' );
+    }
+
+    public function author()
+    {
+        return $this->hasOne('App\Models\Author' );
+    }
+
+    public function reviewer()
+    {
+        return $this->hasOne('App\Models\Reviewer' );
+    }
+
+    public function manager()
+    {
+        return $this->hasOne('App\Models\Manager' );
     }
 }

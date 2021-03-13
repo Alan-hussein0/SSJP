@@ -16,8 +16,8 @@ class ReviewerResearch extends Migration
         Schema::dropIfExists('reviewer_research');
         Schema::create('reviewer_research', function (Blueprint $table) {
             $table->increments('id');
-            $table->bigInteger('reviewer_id');
-            $table->bigInteger('research_id');
+            $table->bigInteger('reviewer_id')->primary();
+            $table->bigInteger('research_id')->primary();
             $table->timestamps();
     });
     }

@@ -22,6 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('is_author')->nullable();
             $table->string('is_reviewer')->nullable();
             $table->string('is_manager')->nullable();
+            $table->string('is_editor')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

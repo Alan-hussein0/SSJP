@@ -192,6 +192,45 @@
         <div class="row mt">
           <div class="col-lg-12">
 
+            <section id="about" class="section-padding">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s">
+                        <img class="img-fluid" src="/photo/profile/ui-sam.jfif" alt="">
+                      </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                      <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s">
+                        <br>
+                        <h3>Hi Guys!</h3>
+                        <p>Est diam venenatis arcu lacus ad. Duis quis eros. Cursus et rutrum eleifend sollicitudin lacinia justo id turpis. Nec convallis integer. Odio eget duis. Nulla aenean et. Blandit varius sollicitudin. Pellentesque leo primis neque urna magnis. Elit ut sollicitudin. Et est a nam dolores eget itaque sagittis et parturient duis est eleifend sociis rutrum odio viverra integer.</p>
+                        <div class="about-profile">
+                          <ul class="admin-profile">
+                            <br>
+                            <li><span class="pro-title"> Name </span> <span class="pro-detail">Tom Saulnier</span></li>
+                            <br>
+                            <li><span class="pro-title"> Gendaer </span> <span class="pro-detail">Male</span></li>
+                            <br>
+                            <li><span class="pro-title"> Specialty </span> <span class="pro-detail">it</span></li>
+                            <br>
+                            <li><span class="pro-title"> Degree </span> <span class="pro-detail">ph.</span></li>
+                            <br>
+                            <li><span class="pro-title"> Address </span> <span class="pro-detail">San Francisco, CA</span></li>
+                            <br>
+                            <li><span class="pro-title"> e-mail </span> <span class="pro-detail">email@example.com</span></li>
+                            <br>
+                            <li><span class="pro-title"> Phone </span> <span class="pro-detail">+ (00) 123 456 789</span></li>
+                            <br>
+                            <li><span class="pro-title"> Skype </span> <span class="pro-detail">Skype.com</span></li>
+                          </ul>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
 
             <!-- /row -->
           </div>

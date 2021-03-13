@@ -176,7 +176,7 @@
 	  <div id="edit" class="tab-pane">
                     <div class="row">
                       <div class="col-lg-8 col-lg-offset-2 detailed">
-                        <h4 class="mb">Show Journal</h4>
+                        <h4 class="mb">Show Research</h4>
                         <form role="form" class="form-horizontal">
                           <td>
                      <h3  style="font-size:35px;">Title of Research:  {{--$research->title--}}</h3>
@@ -184,10 +184,15 @@
                           <div class="form-group">
                             <label class="col-lg-2 control-label">Abstract:</label>
                             <div class="col-lg-10">
-                              <textarea rows="50" cols="80" class="form-control" id="" name="">
+                              <textarea rows="15" cols="80" class="form-control" id="" name="">
                                   {{--$research->abstract--}}
                               </textarea>
                             </div>
+                            <div class="form-group">
+                                <a class="btn btn-primary" data-bs-toggle="collapse" href="{{--route('reviewer.download',$research->id)--}}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    Download
+                                  </a>
+                              </div>
                           </div>
                         </form>
                       </div>
@@ -206,7 +211,7 @@
                     <div class="modal-header">
 
                     </div>
-                    <div class="modal-body">
+                    {{-- <div class="modal-body">
                         <h4 class="modal-title" id="myModalLabel">Choose Reviewers:</h4>
               <label class="checkbox-inline">
                 <input type="checkbox" id="inlineCheckbox1" value="option1"> khaled
@@ -217,11 +222,23 @@
               <label class="checkbox-inline">
                 <input type="checkbox" id="inlineCheckbox3" value="option3"> Abd
                 </label>
+                    </div> --}}
 
-                    </div>
+
+
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Send</button>
+                      {{-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Send</button> --}}
+                      <div class="form-group">
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="{{--route('reviewer.show',$research->id)--}}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            Close
+                        </a>
+
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="{{--route('reviewer.Aproove',$research->id)--}}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            Send
+                        </a>
+
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -237,7 +254,7 @@
                     <div class="modal-header">
 
                     </div>
-                    <div class="modal-body">
+                    {{-- <div class="modal-body">
                         <h4 class="modal-title" id="myModalLabel">Select Problem:</h4>
               <label class="checkbox-inline">
                 <input type="checkbox" id="inlineCheckbox1" value="option1"> Introuduction
@@ -248,18 +265,30 @@
 
 
 
-                    </div>
+                    </div> --}}
 					<div class="form-group">
                             <label class="col-lg-2 control-label">Note:</label>
-                            <div class="col-lg-10">
-                              <textarea rows="10" cols="20" class="form-control" id="" name=""></textarea>
+                            <div class="form-group">
+                                <label for="exampleFormControlInput1">Upload file with note </label>
+                                <input type="file"  name="word_file" class="form-control"   >
                             </div>
                           </div>
 
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      {{-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                       <button type="button" class="btn btn-primary">Send</button>
-                    </div>
+                    </div> --}}
+
+                    <div class="form-group">
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="{{--route('reviewer.show',$research->id)--}}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            Close
+                        </a>
+
+                        <a class="btn btn-primary" data-bs-toggle="collapse" href="{{--route('reviewer.add.note',$research->id)--}}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            Send
+                        </a>
+
+                      </div>
                   </div>
                 </div>
               </div>
