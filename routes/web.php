@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\loginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,8 @@ Route::get('/journal', function () {
 Route::get('/login', function () {
     return view('login');
 });
+
+Route::Post('/signin', 'App\Http\Controllers\loginController@show')->name('signin');
 
 Route::get('/login', function () {
     return view('login');
@@ -74,8 +77,7 @@ Route::get('/editor/policy', function () {
 //---------------------------------------
 //reviewer
 
-Route::get('/reviewer/profile', function () {
-    return view('reviewer.profile');})
+Route::get('/reviewer/profile','App\Http\Controllers\ReviewerController@index')
 ->name('reviewer.profile');
 
 Route::post('/reviewer/update/{$id}','App\Http\Controllers\ReviewerController@update')

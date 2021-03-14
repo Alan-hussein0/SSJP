@@ -16,23 +16,25 @@ class ReviewerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(User $user)
     {
-        $user=Auth::user();
-        $id=Auth::id();
+
+
+        // $user=Auth::user();
+        // $id=Auth::id();
         if ($user->reviewer == null) {
             $reviewer = Reviewer::create([
              'address' => 'Damascus',
-             'user_id'	 => $id,
+             'user_id'	 => $user->value('id'),
              'gender' => 'Male',
              'bio'	 => 'bio',
              'skype' => 'https://www.skype.com',
              'phone'=>'+09',
-             'photo'=>'ui-sam.jfif',
+             'photo'=>'/photo/profile/ui-sam.jfif',
             ]);
 
          }
-         return view('reviewer.profile')->with('user',$user);
+         return view('reviewer.profile')->with('reviewer',$reviewer)->with('user',$user);
     }
 
     /**

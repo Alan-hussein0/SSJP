@@ -192,12 +192,7 @@
           <div class="col-lg-12">
 
             <div class="container">
-                <div class="row">
-                  <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s">
-                      <img class="img-fluid" src="/photo/profile/ui-sam.jfif" alt="">
-                    </div>
-                  </div>
+
 
 
               <section id="about" class="section-padding">
@@ -205,32 +200,32 @@
                   <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                       <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s">
-                        <img class="img-fluid" src="/photo/profile/ui-sam.jfif" alt="">
+                        <img class="img-fluid" src="{{$reviewer->photo}}" alt="">
                       </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                       <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s">
                         <br>
                         <h3>Hi Guys!</h3>
-                        <p>Est diam venenatis arcu lacus ad. Duis quis eros. Cursus et rutrum eleifend sollicitudin lacinia justo id turpis. Nec convallis integer. Odio eget duis. Nulla aenean et. Blandit varius sollicitudin. Pellentesque leo primis neque urna magnis. Elit ut sollicitudin. Et est a nam dolores eget itaque sagittis et parturient duis est eleifend sociis rutrum odio viverra integer.</p>
+                        <p>{!!$reviewer->bio!!}.</p>
                         <div class="about-profile">
                           <ul class="admin-profile">
                             <br>
-                            <li><span class="pro-title"> Name </span> <span class="pro-detail">Tom Saulnier</span></li>
+                            <li><span class="pro-title"> Name </span> <span class="pro-detail">{!!$user->name!!}</span></li>
                             <br>
-                            <li><span class="pro-title"> Gendaer </span> <span class="pro-detail">Male</span></li>
+                            <li><span class="pro-title"> Gendaer </span> <span class="pro-detail">{!!$reviewer->gender!!}</span></li>
                             <br>
-                            <li><span class="pro-title"> Specialty </span> <span class="pro-detail">it</span></li>
+                            <li><span class="pro-title"> Specialty </span> <span class="pro-detail">{!!$reviewer->specialty!!}</span></li>
                             <br>
-                            <li><span class="pro-title"> Degree </span> <span class="pro-detail">ph.</span></li>
+                            <li><span class="pro-title"> Degree </span> <span class="pro-detail">{!!$reviewer->degree!!}.</span></li>
                             <br>
-                            <li><span class="pro-title"> Address </span> <span class="pro-detail">San Francisco, CA</span></li>
+                            <li><span class="pro-title"> Address </span> <span class="pro-detail">{!!$reviewer->address!!}</span></li>
                             <br>
-                            <li><span class="pro-title"> e-mail </span> <span class="pro-detail">email@example.com</span></li>
+                            <li><span class="pro-title"> e-mail </span> <span class="pro-detail">{!!$user->email!!}</span></li>
                             <br>
-                            <li><span class="pro-title"> Phone </span> <span class="pro-detail">+ (00) 123 456 789</span></li>
+                            <li><span class="pro-title"> Phone </span> <span class="pro-detail">{!!$reviewer->phone!!}</span></li>
                             <br>
-                            <li><span class="pro-title"> Skype </span> <span class="pro-detail">Skype.com</span></li>
+                            <li><span class="pro-title"> Skype </span> <span class="pro-detail">{!!$reviewer->skype!!}</span></li>
                           </ul>
                         </div>
 

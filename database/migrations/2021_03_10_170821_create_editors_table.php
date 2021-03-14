@@ -13,6 +13,7 @@ class CreateEditorsTable extends Migration
      */
     public function up()
     {
+
         Schema::create('editors', function (Blueprint $table) {
             $table->increments('id');
             $table->bigInteger('user_id')->unsigned();

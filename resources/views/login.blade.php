@@ -37,9 +37,9 @@
 <body>
 
   <!-- ======= Property Search Section ======= -->
-  
-  
-  
+
+
+
    <div class="click-closed"></div>
   <!--/ Form Search Star /-->
   <div class="box-collapse">
@@ -72,7 +72,7 @@
               <select class="form-control form-select form-control-a" id="Type">
                 <option>تاريخ النشر الحديث</option>
                 <option>تاريخ النشر القديم</option>
-                
+
               </select>
             </div>
           </div>
@@ -82,7 +82,7 @@
               <select class="form-control form-select form-control-a" id="languages">
                 <option>عربي</option>
                 <option>انكليزي</option>
-               
+
               </select>
             </div>
           </div>
@@ -108,7 +108,7 @@
   </div><!-- End Property Search Section -->>
 
   <!-- ======= Header/Navbar ======= -->
-  
+
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -128,14 +128,14 @@
           <li class="nav-item">
           <a class="nav-link" href="{{url('/journal')}}">المجلات</a>
           </li>
-         
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               إضافة مجلة
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="{{url('/addJournal')}}"> طلب إضافة مجلة</a>
-             
+
           </li>
           <li class="nav-item">
           <a class="nav-link" href="{{url('/login')}}">الدخول</a>
@@ -151,27 +151,27 @@
     </div>
   </nav><!-- End Header/Navbar -->
 
- 
 
-   
+
+
 
     <!-- ======= Property Single ======= -->
-  
+
 <body class="bg-dark">
-  
-	
+
+
 	<section class="property-single nav-arrow-b">
       <div class="container">
         <div class="row">
-		
+
  <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> 
+<!--[if gt IE 8]><!-->
 <html class="no-js" lang=""> <!--<![endif]-->
 
-  
+
     <link rel="apple-touch-icon" href="apple-icon.png">
     <link rel="shortcut icon" href="favicon.ico">
 
@@ -185,7 +185,7 @@
     <link rel="stylesheet" href="assets1/scss/style.css">
 
 
-   
+
 
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script> -->
 
@@ -200,18 +200,19 @@
                     </a>
                 </div>
                 <div class="login-form">
-                    <form>
+                    <form method="POST" action="{{ route('signin') }}" class="login100-form validate-form">
+                        @csrf
                         <div class="form-group">
                             <label>البريد الالكتروني</label>
-                            <input type="email" class="form-control" placeholder="البريد الالكتروني">
+                            <input type="email" class="form-control" placeholder="البريد الالكتروني" name="email">
                         </div>
                         <div class="form-group">
                             <label>كلمة السر</label>
-                            <input type="password" class="form-control" placeholder="كلمة السر">
+                            <input type="password" class="form-control" placeholder="كلمة السر" name="password">
                         </div>
-                         
+
                         <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">تسجيل الدخول</button>
-                         
+
                         <div class="register-link m-t-15 text-center">
                             <p>ليس لديك حساب سابق؟ <a href="{{url('/signup')}}"> للتسجيل من هنا</a></p>
                         </div>
@@ -232,9 +233,9 @@
 </html>
 
 
-		 
-		 
-		 
+
+
+
         </div>
       </div>
     </section><!-- End Property Single-->
@@ -268,14 +269,14 @@
             </div>
           </div>
         </div>
-       
+
   </section>
   <footer>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <nav class="nav-footer">
-         
+
           </nav>
           <div class="socials-a">
             <ul class="list-inline">
